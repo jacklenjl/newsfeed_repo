@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+<head>
+           <script type="text/javascript">
+           function myFunction() {
+    window.onload=#{b3.submit()};
+
+
+}
+
+       </script>
+<title>NewsFeed | Pages | Single Page</title>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/font.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/li-scroller.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.fancybox.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/theme.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+<!--[if lt IE 9]>
+<script src="../assets/js/html5shiv.min.js"></script>
+<script src="../assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!--<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>-->
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="container" style="  background-color: lightgrey;">
+   <header id="header">
+    <div class="row" >
+   
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_bottom"  style="  background-color: black;">
+            <div class="logo_area" ><a href="index.html" class="logo"><img src="../images/VSIT H logo.png" alt=""/></a></div>
+          <div class="add_banner">    <div class="home" align="right" style="font-size: 40px;padding:12px 10px; font-family: Impact;">   <div class="mid animated zoomIn" ><font color="#95c56f">Vidyalankar</font><font color="c1359e"> Digital</font>
+  <font color="00af9b"> Repository</font>
+               </div> 
+            </div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="navArea">
+     <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav main_nav">
+            <li class="active"><a href="../index.xhtml"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+         
+             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects</a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="repo bscit.xhtml">BSc-IT</a></li>
+                <li><a href="repo bms.xhtml">BMS</a></li>
+                <li><a href="repo baf.xhtml">BAF</a></li>
+             
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ebooks</a>
+          <ul class="dropdown-menu" role="menu">
+              <li><a href="ebook bscit.xhtml">BSc-IT</a></li>
+              <li><a href="ebook bms.xhtml">BMS</a></li>
+              <li><a href="ebook baf.xhtml">BAF</a></li>
+             
+            </ul>
+          </li>
+          
+          <li><a href="contact.xhtml">Contact Us</a></li>
+          
+          <li><a href="../login.xhtml" >Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+   <section id="newsSection">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="latest_newsarea"> <span>Latest News</span>
+          <ul id="ticker01" class="news_sticker">
+            
+              <c:forEach var="i" begin="0" end="15">
+                  <li ><a  >||<h:outputText  value="#{b3.titlell[i]}"/>||</a></li>
+             
+              </c:forEach>
+                    
+          
+          </ul>
+          <div class="social_area">
+            <ul class="social_nav">
+              <li class="facebook"><a href="#"></a></li>
+              <li class="twitter"><a href="#"></a></li>
+              <li class="flickr"><a href="#"></a></li>
+              <li class="pinterest"><a href="#"></a></li>
+              <li class="googleplus"><a href="#"></a></li>
+              <li class="vimeo"><a href="#"></a></li>
+              <li class="youtube"><a href="#"></a></li>
+              <li class="mail"><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="single_page">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#">Technology</a></li>
+             
+            </ol>
+                <h1><h:outputText  value="#{b3.title1[4]}"/></h1>
+            <div class="post_commentbox"> <a href="#"><i class="fa fa-user"></i>Wpfreeware</a> <span><i class="fa fa-calendar"></i>6:49 AM</span> <a href="#"><i class="fa fa-tags"></i>Technology</a> </div>
+            <div class="single_page_content"> <h:graphicImage class="img-center" value="${b3.address[4]}"/>
+              <p></p>
+              <blockquote> <h:outputText value="#{b3.test[4]}"/></blockquote>
+            </div>
+            <div class="social_link">
+              <ul class="sociallink_nav">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+         <div class="related_post">
+              <h2>Related Post <i class="fa fa-thumbs-o-up"></i></h2>
+              <ul class="spost_nav wow fadeInDown animated">
+                <li>
+                  <div class="media"> <a class="media-left" href="single_page1.xhtml"> <h:graphicImage  value="${b3.address[1]}"/> </a>
+                    <div class="media-body"> <a class="catg_title" href="single_page1.xhtml"><h:outputText  value="#{b3.title1[1]}"/></a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media"> <a class="media-left" href="single_page2.xhtml"> <h:graphicImage  value="${b3.address[2]}"/> </a>
+                    <div class="media-body"> <a class="catg_title" href="single_page2.xhtml"> <h:outputText  value="#{b3.title1[2]}"/></a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media"> <a class="media-left" href="single_page3.xhtml"> <h:graphicImage  value="${b3.address[3]}"/>  </a>
+                    <div class="media-body"> <a class="catg_title" href="single_page3.xhtml"> <h:outputText  value="#{b3.title1[3]}"/></a> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <aside class="right_content">
+           <div class="latest_post">
+          <h2><span>Latest post</span></h2>
+          <div class="latest_post_container">
+            <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
+            <ul class="latest_postnav">
+             <li>
+                <div class="media"> <a class="media-left"><h:graphicImage  value="${b3.address[0]}"/> </a>
+                  <div class="media-body"> <a  class="catg_title"><h:outputText  value="#{b3.title1[0]}"/> </a> </div>
+                </div>
+              </li>
+                 <li>
+                <div class="media"> <a  class="media-left"><h:graphicImage  value="${b3.address[1]}"/> </a>
+                  <div class="media-body"> <a  class="catg_title"><h:outputText  value="#{b3.title1[1]}"/> </a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media"> <a  class="media-left"><h:graphicImage  value="${b3.address[2]}"/> </a>
+                  <div class="media-body"> <a  class="catg_title"><h:outputText  value="#{b3.title1[2]}"/> </a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media"> <a  class="media-left"><h:graphicImage  value="${b3.address[3]}"/> </a>
+                  <div class="media-body"> <a  class="catg_title"><h:outputText  value="#{b3.title1[3]}"/> </a> </div>
+                </div>
+              </li>
+                 <li>
+                <div class="media"> <a  class="media-left"><h:graphicImage  value="${b3.address[4]}"/> </a>
+                  <div class="media-body"> <a  class="catg_title"><h:outputText  value="#{b3.title1[4]}"/> </a> </div>
+                </div>
+              </li>
+            
+             
+              
+            </ul>
+            <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
+          </div>
+        </div>
+        
+          <div class="single_sidebar wow fadeInDown">
+            <h2><span>Sponsor</span></h2>
+            <a class="sideAdd" href="#"><img src="../images/add_img1.jpg" alt=""/></a> </div>
+        
+     
+        </aside>
+      </div>
+    </div>
+  </section>
+ <footer id="footer">
+    <div class="footer_top">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInLeftBig">
+              
+              
+              
+              <h2><br/></h2>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInRightBig">
+            <h2>Vidyalankar</h2>
+            <p> this content is under provision of vidyalankar school of information technology.</p>
+            <address>
+            
+            </address>
+          </div>
+        </div>
+           <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInLeftBig">
+              
+              
+              
+              <h2><br/></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <p class="copyright"><a href="index.html">© 2016-17 VSIT Wadala</a></p>
+      <p class="developer" style="color: white;">Developed By Kunal and Rohit</p>
+    </div>
+       </footer>
+</div>
+<script src="../assets/js/jquery.min.js"></script> 
+<script src="../assets/js/wow.min.js"></script> 
+<script src="../assets/js/bootstrap.min.js"></script> 
+<script src="../assets/js/slick.min.js"></script> 
+<script src="../assets/js/jquery.li-scroller.1.0.js"></script> 
+<script src="../assets/js/jquery.newsTicker.min.js"></script> 
+<script src="../assets/js/jquery.fancybox.pack.js"></script> 
+<script src="../assets/js/custom.js"></script>
+</body>
+</html>

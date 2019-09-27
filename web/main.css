@@ -1,0 +1,87 @@
+.welcome
+{   font-family: Impact;
+  background-color:#282a36 ;
+  padding: 20px 20px 25px 20px;
+  font-size: 250%;
+      color: white;
+    }
+.home
+{  
+   
+    font-family: Impact;
+ font-weight:bold;
+      color: white;
+      
+      
+    }
+    
+    
+        
+    body{
+            background-color: lightgrey;  
+    }
+
+   /* form{
+
+        border-style:dotted;
+        border-width:5px;
+        border-color:grey;
+
+    }*/
+    .box {
+        align-content: center;
+        font-family: Impact;
+        font-size:4;
+         color:black;
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+
+    border-style: solid;
+    border: 25px;
+   border: 25px solid #282a36;
+
+    margin: 25px;
+}
+    .button {
+  border-radius: 5px;
+  background-color:  #4285f4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.row{
+    
+    align-content: center;
+        font-family: Impact;
+        font-size:4;
+         color:black;
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+
+    border-style: solid;
+    border: 25px;
+   border: 25px solid #282a36;
+
+    margin: 25px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

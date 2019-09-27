@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Login</title>
+        <link rel="stylesheet" href="animate.css"></link>
+  <link rel="stylesheet" href="main.css"></link>
+  <link rel="text/html" href="menubar.htm"></link>
+ 
+ 
+            </h:head>
+    <h:body>
+ 
+        <div class="welcome">
+<center><div class="hello animated fadeInDown " >
+<font color="#95c56f">Welcome</font><font color="c1359e"> To</font>
+<font color="e33b3b"> Vidyalankar</font><font color="00af9b"> Repository</font>
+ </div>  </center></div>
+<center>
+<div class="loginform animated bounceInDown">
+    <h:form>
+
+<div class="box">
+
+Username:
+<h:inputText id="textcode" value="#{b1.user}"/>
+
+    <br/>
+<br/>
+Password:
+<h:inputSecret  id="textpasswd" value="#{b1.passwd}"/>
+<br/><br/>
+
+<h:commandButton class="button" id="cmdpass" value="Login" action="#{b1.loginpass()}" /> 
+
+<br/>
+<br/>
+<h:outputLabel style="color: red;" value="#{b1.status}"/>
+</div>
+
+    </h:form>
+    
+</div>
+    
+</center>
+<br/>
+<br/><br/>
+        <footer style="background: #282a36;padding: 170px 15px 50px 15px;bottom: 0;">
+            <center><p style="color: whitesmoke;font-family: impact;">This content is under provision of vidyalankar school of information technology.</p>
+            </center>
+                <br/>
+            <a style="color: whitesmoke;float:left;font-family: impact;"> © 2016-17 VSIT Wadala</a>
+           <div class="hovertheco"> <a href="contact.xhtml" style="color: whitesmoke;font-family: impact; float: right;">Contact us for your Queries</a>
+            
+            </div>
+           
+            
+            
+        </footer>
+    </h:body>
+    
+</html>
+

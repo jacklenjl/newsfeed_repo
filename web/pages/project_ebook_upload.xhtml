@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Project_uploading</title>
+        <script type="text/javascript">
+           function myFunction() {
+    window.onload=#{b3.submit()};
+
+
+};
+
+       </script>
+        <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!--meta name="viewport" content="width=device-width, initial-scale=1"/-->
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/font.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/li-scroller.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.fancybox.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/theme.css"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        
+<!--<div id="preloader">
+  <div id="status"></div>
+</div>-->
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="container"  style="  background-color: lightgrey;">
+  <header id="header">
+    <div class="row" >
+   
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_bottom"  style="  background-color: black;">
+            <div class="logo_area" ><a href="index.html" class="logo"><img src="../images/VSIT H logo.png" alt=""/></a></div>
+          <div class="add_banner">    <div class="home" align="right" style="font-size: 40px;padding:12px 10px; font-family: Impact;">   <div class="mid animated zoomIn" ><font color="#95c56f">Vidyalankar</font><font color="c1359e"> Digital</font>
+  <font color="00af9b"> Repository</font>
+               </div> 
+            </div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="navArea">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <!--h:commandButton type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"/> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button-->
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav main_nav">
+          <li class="active"><a href="../aindex.xhtml"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+          <li><a href="news_posting.xhtml">News Post</a></li>
+          
+          <li><a href="project_ebook_upload.xhtml">Ebooks and Project upload</a></li>
+          <li><a href="news_delete.xhtml">Delete News</a></li>
+          <li><a href="messages.xhtml">Contact Us Messages</a></li>
+          <li><a href="../login.xhtml" >Sign Out</a></li>
+          
+        </ul>
+      </div>
+          
+    </nav>
+  </section>
+   <section id="newsSection">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="latest_newsarea"> <span>Latest News</span>
+          <ul id="ticker01" class="news_sticker">
+            
+              <c:forEach var="i" begin="0" end="15">
+                  <li ><a  >||<h:outputText  value="#{b3.titlell[i]}"/>||</a></li>
+             
+              </c:forEach>
+                    
+          
+          </ul>
+          <div class="social_area">
+            <ul class="social_nav">
+              <li class="facebook"><a href="#"></a></li>
+              <li class="twitter"><a href="#"></a></li>
+              <li class="flickr"><a href="#"></a></li>
+              <li class="pinterest"><a href="#"></a></li>
+              <li class="googleplus"><a href="#"></a></li>
+              <li class="vimeo"><a href="#"></a></li>
+              <li class="youtube"><a href="#"></a></li>
+              <li class="mail"><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="contact_area">
+            
+              
+            <h2>Upload Project</h2>
+            
+<h:form class="" enctype="multipart/form-data">
+                <h:selectOneMenu class="form-control" value="#{b2.field_p}">
+   	<f:selectItem itemValue="IT" itemLabel="BSCIT" />
+   	<f:selectItem itemValue="BMS" itemLabel="BMS" />
+   	<f:selectItem itemValue="BAF" itemLabel="BAF" />
+                </h:selectOneMenu>
+            <br/>    
+                 
+    Select file:<h:inputFile required="true" class="form-control" value="#{b2.proj_file}"/> <br/>     
+                <!--h:inputText class="form-control" size="3" value="#{b2.field_p}"/><br/-->
+
+                <h:commandButton class="btn-theme" value="post" action="#{b2.upload_projects()}" /> 
+</h:form>
+            <h2>Upload Ebooks</h2>
+<h:form class="" enctype="multipart/form-data">
+            
+              
+            <h:selectOneMenu class="form-control" value="#{b2.field_e}">
+   	<f:selectItem itemValue="IT" itemLabel="BSCIT" />
+   	<f:selectItem itemValue="BMS" itemLabel="BMS" />
+   	<f:selectItem itemValue="BAF" itemLabel="BAF" />
+            </h:selectOneMenu>
+            <br/>
+                 
+    Select file:<h:inputFile required="true" class="form-control" value="#{b2.ebook_file}"/><br/>
+                <!--h:inputText class="form-control" size="3" value="#{b2.field_e}"/><br/-->
+                <h:commandButton class="btn-theme" value="post" action="#{b2.upload_ebooks()}" /> 
+</h:form>
+            
+          </div>
+        </div>
+      </div>
+   
+    </div>
+  </section>
+<footer id="footer">
+    <div class="footer_top">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInLeftBig">
+              
+              
+              
+              <h2><br/></h2>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInRightBig">
+            <h2>Vidyalankar</h2>
+            <p> this content is under provision of vidyalankar school of information technology.</p>
+            <address>
+            
+            </address>
+          </div>
+        </div>
+           <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInLeftBig">
+              
+              
+              
+              <h2><br/></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <p class="copyright"><a href="index.html">© 2016-17 VSIT Wadala</a></p>
+      <p class="developer" style="color: white;">Developed By Kunal and Rohit</p>
+    </div>
+       </footer>
+</div>
+<script src="../assets/js/jquery.min.js"></script> 
+<script src="../assets/js/wow.min.js"></script> 
+<script src="../assets/js/bootstrap.min.js"></script> 
+<script src="../assets/js/slick.min.js"></script> 
+<script src="../assets/js/jquery.li-scroller.1.0.js"></script> 
+<script src="../assets/js/jquery.newsTicker.min.js"></script> 
+<script src="../assets/js/jquery.fancybox.pack.js"></script> 
+<script src="../assets/js/custom.js"></script>
+
+    </body>
+</html>
